@@ -47,10 +47,6 @@ async function run() {
             // console.log(result);
             res.send(result);
         })
-
-
-
-
     }
     finally {
         // await client.close();
@@ -58,15 +54,10 @@ async function run() {
 }
 run().catch(console.dir);
 
-
 app.get('/', (req, res) => {
     res.send('Tourmania Server is running');
 })
 
-app.get('/hello', (req, res) => {
-    res.send('Hello My testinggggggggggg');
-    console.log("hello my testinggg")
-})
 app.listen(port, () => {
     console.log('listening from the port', port);
 })
