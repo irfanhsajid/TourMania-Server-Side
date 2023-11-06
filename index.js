@@ -26,8 +26,7 @@ async function run() {
             const result = await packageCollection.find({}).toArray();
             res.send(result);
         });
-
-        //addOrder Post method
+        //addOrder Post methods
         app.post('/addOrder', (req, res) => {
             // console.log(req.body);
             ordersCollection.insertOne(req.body).then(result => {
